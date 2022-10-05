@@ -5,14 +5,14 @@ import React from 'react'
 
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-const Splash = ({navigation}) => {
+const Splash = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
                 < Image
                     // animation="bounceIn"
                     // duraton="1500"
-                source={require('../assests/logo.png')} style={styles.logo} />
+                    source={require('../assests/logo.png')} style={styles.logo} />
             </View>
             <View style={styles.footer}>
                 <Text style={styles.title}>Stay connected with everyone!</Text>
@@ -23,12 +23,12 @@ const Splash = ({navigation}) => {
                             colors={['#08d4c4', '#01ab9d']}
                             style={styles.signIn}>
                             <Text style={styles.textSignIn}>Get Started</Text>
-                      <MaterialIcons
-                      name='navigate-next'
-                      color="#fff"
-                      size={20}
-                      />
-                       </LinearGradient>
+                            <MaterialIcons
+                                name='navigate-next'
+                                color="#fff"
+                                size={20}
+                            />
+                        </LinearGradient>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -82,9 +82,9 @@ const styles = StyleSheet.create({
         color: "white",
         fontWeight: "bold",
     },
-    button:{
-        alignItems:'flex-end',
-        marginTop:30,
+    button: {
+        alignItems: 'flex-end',
+        marginTop: 30,
     },
 })
 
