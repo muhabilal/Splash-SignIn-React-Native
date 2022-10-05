@@ -2,6 +2,12 @@ import { StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
 // import { AntDesign } from 'react-native-vector-icons/AntDesign'
 const SignInScreen = () => {
+  const [data, setdata] = useState({
+    email: '',
+    password: '',
+    secureTextEntry: true,
+    check_textInputChange: false
+  })
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -13,6 +19,18 @@ const SignInScreen = () => {
           {/* <AntDesign name="home" size={24} color="black" /> */}
           <TextInput placeholder='Your Email'
             autoCapitalize='none'
+            style={styles.textInput}
+          />
+        </View>
+        <Text style={[styles.text_footer, {
+          marginTop: 35
+        }]}>Password</Text>
+        <View style={styles.action}>
+          {/* <AntDesign name="home" size={24} color="black" /> */}
+          <TextInput placeholder='Your Email'
+            autoCapitalize='none'
+            style={styles.textInput}
+            secureTextEntry={true}
           />
         </View>
       </View>
@@ -50,5 +68,18 @@ const styles = StyleSheet.create({
   text_footer: {
     color: '#05375a',
     fontSize: 18,
+  },
+  action: {
+    flexDirection: 'row',
+    // marginTop: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#f2f2f2',
+    // paddingBottom: 2,
+  },
+  textInput: {
+    flex: 1,
+    // marginTop: Platform.OS === 'ios' ? 0 : -12,
+    paddingLeft: 10,
+    color: '#05375a',
   },
 })
